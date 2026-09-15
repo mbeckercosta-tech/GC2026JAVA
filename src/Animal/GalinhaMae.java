@@ -1,9 +1,8 @@
 package Animal;
 
-public class GalinhaMae extends Animal {
-    public GalinhaMae(String nome, int idade, String cor, String som, String produto) {
-        super(nome, idade, cor, produto, som);
-
+public class GalinhaMae extends AnimalBase {
+    public GalinhaMae(String nome, int idade, String cor, String ID, String raça) {
+        super(nome, idade, cor, ID, raça);
 
     }
 
@@ -11,4 +10,22 @@ public class GalinhaMae extends Animal {
     public void emitirSom() {
         System.out.println("PÓPÓPÓPÓ");
     }
+    @Override
+    public String coletarProduto() {
+        System.out.println("Você coletou um ovo. Agora a galinha está triste.");
+        return "ovo";
+    }
+
+    @Override
+    public String getEspecie() {
+        return "Galinha";
+    }
+
+    @Override
+    public String getStatus() {
+        return "Produz ovos";
+    }
+
 }
+
+
